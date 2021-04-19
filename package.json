@@ -1,0 +1,44 @@
+{
+  "name": "api-bridge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/postageapp/cuckoo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/postageapp/cuckoo/issues"
+  },
+  "homepage": "https://github.com/postageapp/cuckoo#readme",
+  "engines": {
+    "node": "15.11.0"
+  },
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf .nyc_output coverage",
+    "purge": "rm -rf node_modules package-lock.json && $npm_execpath clean",
+    "lint": "$npm_execpath eslint . --ext .js,.jsx,.ts,.tsx",
+    "compile": "$npm_execpath run clean && npx tsc --declaration",
+    "test": "$npm_execpath run lint && $npm_execpath nyc mocha",
+    "benchmark": "$npm_execpath run compile && bin/benchmark.mjs",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "Danny Fekete<danny@postageapp.com>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/koa": "^2.13.1",
+    "@types/node": "^14.14.37",
+    "@types/yargs": "^16.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "eslint": "^7.20.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "koa": "^2.13.1",
+    "yargs": "^16.2.0"
+  }
+}
