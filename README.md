@@ -1,4 +1,8 @@
-# Cuckoo: An API-Bridge for [PostageApp](https://github.com/postageapp/postageapp) and [Pistachio](https://github.com/postageapp/pistachio)
+# TypeScript HTTP Requester for the Command Line
+
+This is a tool I built as an exercise to familiarize myself with TypeScript, Axios, and command line tools (here, using [Yargs](http://yargs.js.org/)).  It assumes I'm trying to reach the PostageApp API, but can be configured to call up any target.
+
+... Probably of not of much value beyond building my own personal experience.
 
 ## Preparation
 
